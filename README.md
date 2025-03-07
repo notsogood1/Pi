@@ -23,7 +23,7 @@ Follow these steps to run the Pi calculator directly from your existing GitHub r
 
 2.  **Start a Simple HTTP Server:**
     -   Once CodeSpaces is running, a terminal will open. If not, open a new terminal within your CodeSpace.
-    -   Use Python's built-in `http.server` to start a simple server. Copy and past the following code into the terminal
+    -   Use Python's built-in `http.server` to start a simple server. Copy and paste the following code into the terminal
 
         ```bash
         python3 -m http.server 8080
