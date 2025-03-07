@@ -41,7 +41,5 @@ Follow these steps to run the Pi calculator directly from your existing GitHub r
 
 ## Notes
 
--      Ensure that your `index.html` file is in the root directory of your repository.
 -      CodeSpaces automatically forwards ports, making it easy to access your application.
 -   Using `python3 -m http.server` (or `python -m SimpleHTTPServer`) is a convenient way to serve static files during development in CodeSpaces.
--   If you need a more robust server, consider using Node.js with `http-server` or `live-server`, or a more complex solution like a Flask or Django server in python.
