@@ -1,4 +1,4 @@
-# Optimized Leibniz Pi Calculator
+# Pi Calculator
 
 This project provides a web-based calculator that approximates the value of Pi using the Leibniz formula. It offers a simple, interactive interface to start and stop the calculation and displays the computed Pi value in real-time.
 
