@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Optimized Leibniz Pi Calculator</title>
+<style>
+body {
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #282c34;
+  color: #61afef;
+}
+
+#result {
+  font-size: 1.5em;
+  margin-top: 20px;
+  background-color: #3e4451;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 400px;
+  text-align: left;
+  white-space: pre;
+  overflow: hidden;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #56b6c2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+</style>
+</head>
+<body>
+  <h1>Optimized Leibniz Pi Calculator</h1>
+
+  <div id="controls">
+    <button id="start">Start Calculating Pi</button>
+    <button id="stop" disabled>Stop</button>
+  </div>
+
+  <div id="result">Pi: 4.0</div>
+
+  <script>
+    let isRunning = false;
+    let intervalId;
+    let terms = 1;
+    let pi = 4.0;
+    let sign = -1;
+    let solvedDigits = "4.0";
+
+    function calculateNextTerm() {
+      pi += sign / (2 * terms + 1) * 4;
+      sign *= -1;
+      terms++;
+      solvedDigits = pi.toFixed(15);
+      document.getElementById('result').textContent = 'Pi: ' + solvedDigits;
+    }
+
+    document.getElementById('start').addEventListener('click', function() {
+      if (!isRunning) {
+        isRunning = true;
+        document.getElementById('start').disabled = true;
+        document.getElementById('stop').disabled = false;
+        terms = 1;
+        pi = 4.0;
+        sign = -1;
+        solvedDigits = "4.0";
+        document.getElementById('result').textContent = 'Pi: 4.0';
+        intervalId = requestAnimationFrame(function runLoop(){
+            calculateNextTerm();
+            if(isRunning){
+                requestAnimationFrame(runLoop)
+            }
+        });
+      }
+    });
+
+    document.getElementById('stop').addEventListener('click', function() {
+      if (isRunning) {
+        isRunning = false;
+        document.getElementById('start').disabled = false;
+        document.getElementById('stop').disabled = true;
+      }
+    });
+  </script>
+</body>
+</html>
