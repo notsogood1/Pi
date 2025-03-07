@@ -12,14 +12,14 @@ The script implements the Leibniz formula, a mathematical series, to approximate
 -   **Clean and Clear Output:** The calculated Pi value is presented in a formatted display area.
 -   **Optimized Performance:** Uses `requestAnimationFrame` for efficient rendering and smooth updates.
 
-## How to Use in GitHub CodeSpaces (Assuming `index.html` is in your Repository)
+## How to Use in GitHub CodeSpaces 
 
 Follow these steps to run the Pi calculator directly from your existing GitHub repository using CodeSpaces:
 
 1.  **Open Your Repository in CodeSpaces:**
     -      Click the green "Code" button.
     -      Select the "CodeSpaces" tab.
-    -      Click "Create codespace on main" (or your branch name).
+    -      Click "Create codespace on main".
 
 2.  **Start a Simple HTTP Server:**
     -   Once CodeSpaces is running, a terminal will open. If not, open a new terminal within your CodeSpace.
@@ -33,9 +33,13 @@ Follow these steps to run the Pi calculator directly from your existing GitHub r
     -   CodeSpaces will automatically detect the port and provide a "Ports" tab at the bottom of the window.
     -   Click the "Ports" tab, and you'll see port 8080 listed.
     -   Click the globe icon next to port 8080 to open the application in a new browser tab.
+4. **White Page Directory**    
+    - This page opens a directory with 3 options
+    -     .git/     Pi.html     &     README.md
+    -   Click on Pi.Html to open the page.
 
-4.  **Interact with the Calculator:**
-    -   Your browser will open, displaying the Pi calculator.
+5.  **Interact with the Calculator:**
+    -   Your Pi page will open, displaying the Pi calculator.
     -   Click "Start Calculating Pi" to begin the approximation.
     -   Click "Stop" to halt the calculation.
 
